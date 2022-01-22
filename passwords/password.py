@@ -9,7 +9,6 @@ class Password:
     def create_password(self):
         Password.user_passwords.append(self)
 
-
     def delete_password(self, page):
         for password in Password.user_passwords:
             if password.page == page:

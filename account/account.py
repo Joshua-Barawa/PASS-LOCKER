@@ -8,9 +8,9 @@ class Account:
     def create_account(self):
         Account.user_accounts.append(self)
 
-    def login(self, username):
+    def login(self, username, password):
         for account in Account.user_accounts:
-            if account.username == username:
+            if account.username == username and account.password == password:
                 return True
             else:
                 return False
