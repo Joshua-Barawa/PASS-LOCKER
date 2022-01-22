@@ -1,3 +1,5 @@
+from account import account
+
 
 class Main:
 
@@ -15,6 +17,12 @@ class Main:
             print("****************\nCREATE ACCOUNT\n****************")
             username = input("Enter username: ")
             password = input("Enter password: ")
+            account = account.Account(username, password)
+            account.create_account()
+
+            for user in account.user_accounts:
+                print("Account created with username and password " + user.username + "/" + user.password)
+                print("1 Create new password\n2 View saved passwords\n3 Logout")
 
         elif choice == 3:
             print("****************\nexited successfully\n****************")

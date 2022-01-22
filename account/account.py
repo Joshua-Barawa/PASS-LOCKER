@@ -6,7 +6,7 @@ class Account:
     user_accounts = []
 
     def create_account(self):
-        Account.user_account.append(self)
+        Account.user_accounts.append(self)
 
     def login(self, username):
         for account in Account.user_accounts:
@@ -18,7 +18,7 @@ class Account:
     def delete_account(self):
         for account in Account.user_accounts:
             if account.username == self.username:
-                return True
+                Account.user_accounts.remove(account)
             else:
                 return False
 
