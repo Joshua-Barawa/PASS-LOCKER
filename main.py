@@ -3,12 +3,11 @@ from passwords import password
 
 
 class Main:
-
     print("Welcome to password locker, Enter number to choose option")
-    print("1 LOG IN\n2 SIGN UP\n3 EXIT")
+    # print("1 LOG IN\n2 SIGN UP\n3 EXIT")
 
     while True:
-
+        print("1 LOG IN\n2 SIGN UP\n3 EXIT")
         choice = int(input())
         if choice == 1:
             print("****************\nLOGIN TO ACCOUNT\n****************")
