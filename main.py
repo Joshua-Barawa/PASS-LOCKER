@@ -3,8 +3,11 @@ from passwords import password
 
 
 class Main:
+
+    def login(self, username):
+        account.Account.login(username)
+
     print("Welcome to password locker, Enter option number to continue")
-    # print("1 LOG IN\n2 SIGN UP\n3 EXIT")
 
     while True:
         print("1 LOG IN\n2 SIGN UP\n3 EXIT")
@@ -14,8 +17,7 @@ class Main:
             username = input("Enter username: ")
             pass_word = input("Enter password: ")
 
-            login = account.login(username)
-            if not login:
+            if not login(username):
                 print("Invalid user credentials")
             else:
                 print("Welcome back ", username, "Enter option number to continue")
