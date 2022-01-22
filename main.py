@@ -13,9 +13,9 @@ class Main:
             print("****************\nLOGIN TO ACCOUNT\n****************")
             username = input("Enter username: ")
             pass_word = input("Enter password: ")
-            new_account = account.Account(username, pass_word)
 
-            if not new_account.login():
+            new_account = account.Account(username, pass_word)
+            if not new_account.login(username):
                 print("Invalid user credentials")
             else:
                 while True:
