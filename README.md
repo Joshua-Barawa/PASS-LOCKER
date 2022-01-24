@@ -17,10 +17,12 @@ These are tasks a user can perform with the application.
 
 ### Cloning
  * $ git clone https://github.com/Joshua-Barawa/PASS-LOCKER.git
- * $ cd password-lock
+ 
 ### Running the Application
 To run the application, in your terminal:
- * $ ./main.py
+* $ cd password-lock
+* $ sudo chmod +x main.py
+* $ ./main.py
 
 ### Technologies Used
 * Python3.8
