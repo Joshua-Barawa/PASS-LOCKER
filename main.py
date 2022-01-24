@@ -1,11 +1,8 @@
-from account import account
-from passwords import password
+from account import Account
+from password import Password
 
 
 class Main:
-
-    def login(self, username):
-        account.Account.login(username)
 
     print("Welcome to password locker, Enter option number to continue")
 
@@ -16,8 +13,8 @@ class Main:
             print("****************\nLOGIN TO ACCOUNT\n****************")
             username = input("Enter username: ")
             pass_word = input("Enter password: ")
-
-            if not login(username):
+            new_account = Account(username, pass_word)
+            if not new_account.login(username):
                 print("Invalid user credentials")
             else:
                 print("Welcome back ", username, "Enter option number to continue")
@@ -27,8 +24,7 @@ class Main:
                     if choice == 1:
                         page = input("Enter page name: ")
                         pass_word = input("Enter password: ")
-
-                        new_password = password.Password(page, pass_word)
+                        new_password = Password(page, pass_word)
                         new_password.create_password()
                         print("*******\npassword saved\n*******")
 
@@ -51,7 +47,7 @@ class Main:
             print("****************\nCREATE ACCOUNT\n****************")
             username = input("Enter username: ")
             pass_word = input("Enter password: ")
-            account = account.Account(username, pass_word)
+            account = Account(username, pass_word)
             account.create_account()
 
             for user in account.user_accounts:
@@ -63,7 +59,7 @@ class Main:
                         page = input("Enter page name: ")
                         pass_word = input("Enter password: ")
 
-                        new_password = password.Password(page, pass_word)
+                        new_password = Password(page, pass_word)
                         new_password.create_password()
                         print("*******\npassword saved\n*******")
 
